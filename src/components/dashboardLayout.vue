@@ -25,6 +25,7 @@
                 v-for="item in items"
                 :key="item.title"
                 link
+                :to="item.path"
                 >
                 <v-list-item-icon>
                     <v-icon>{{ item.icon }}</v-icon>
@@ -75,7 +76,9 @@ export default {
         return {
             drawer: null,
             items: [
-                { title: 'User Controller', icon: 'mdi-human-male' },
+                { title: 'Landing Page', icon: 'mdi-home', path: 'home' },
+                { title: 'User Controller', icon: 'mdi-human-male', path: 'user' },
+                { title: 'Layanan Kendaraan', icon: 'mdi-tools', path: 'services'},
             ],
         }
     },
